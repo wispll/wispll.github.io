@@ -9,7 +9,7 @@ categories: vim
 
 Qt的项目结构写在.pro文件中。下面是一个最基本的.pro文件。
 
-```
+```code
 QMAKE_CC = clang 
 QMAKE_CXX = clang++
 
@@ -48,20 +48,19 @@ HEADERS  += include/*.h
 ## 代码补全
 
 补全我是用YCM插件，YCM有两种方法可以提供补全。
+
 - 编译器是clang，可以使用编译数据库文件compile_commands.json
 
 - 其他编译器，需要将编译标志写在.ycm_extra_conf.py文件中
 
 ### compile_commands.json
 
-首先安装bear这个软件，项目地址`https://github.com/rizsotto/Bear`。
+首先安装bear这个软件，项目地址<https://github.com/rizsotto/Bear>。
 bear可以通过Makefile文件生成compile_commands.json文件。
 执行命令`bear -- make`，就可以将Makefile中的编译标志告诉bear生成compile_commands.json。
 
-### .ycm_extra_conf.py 
+### .ycm_extra_conf.py
 
 对于.ycm_extra_conf.py, 可以通过YCM-Generator这个vim插件来生成。
 注意，这个插件生成的编译标志只适用于Qt。
 vim执行`:CCGenerateConfig`, 然后就会在当前目录生成.ycm_extra_conf.py文件，注意当前目录，必须存在Makefile文件。
-
-

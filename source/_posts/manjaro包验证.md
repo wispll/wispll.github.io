@@ -5,7 +5,8 @@ tags: pacman
 categories: manjaro
 ---
 
-## pacman-key 
+## pacman-key
+
 pacman-key是pacman用来管理受信任证书(公钥)的工具。
 
 `pacman-key --init`
