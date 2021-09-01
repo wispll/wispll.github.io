@@ -62,7 +62,7 @@ vendor是go1.5提供的特性，可通过govendor工具进行包管理，地址<
 
 `govendor add`可以将依赖包转移到vendor目录下。
 
-具体可查看`govendor --hell`。
+具体可查看`govendor --help`。
 
 **1.11版本之后go提供了module功能。所以govendor已经没有再更新了，推荐使用module来管理项目。**
 
