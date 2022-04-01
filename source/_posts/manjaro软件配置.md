@@ -1,11 +1,11 @@
 ---
-title: rime输入法安装
+title: manjaro软件配置
 date: 2022-02-16 23:02:19
 tags:
-categories: rime
+categories: manjaro
 ---
 
-最近，我把电脑重装了。本想装回googlepinyin，无奈看了下github最后一次提交已是5年前。
+#### rime输入法
 
 ```bash
 
@@ -44,4 +44,12 @@ patch:
       states: ["漢字", "汉字"]
     - name: ascii_punct
       states: ["。，", "．，"]
+```
+
+#### wps
+
+```bash
+yay -S wps-office-cn  #wps CN version
+yay -S ttf-wps-fonts  #特殊符号支持
+yay -S wps-office-mui-zh-cn #完整中文支持
 ```
