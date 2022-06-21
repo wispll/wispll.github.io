@@ -21,11 +21,11 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="黑狐">
+<meta property="og:title" content="洋葱">
 <meta property="og:url" content="https://wispll.github.io/index.html">
-<meta property="og:site_name" content="黑狐">
+<meta property="og:site_name" content="洋葱">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="黑狐">
+<meta property="article:author" content="洋葱">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://wispll.github.io/">
@@ -41,7 +41,7 @@
   };
 </script>
 
-  <title>黑狐</title>
+  <title>洋葱</title>
   
 
 
@@ -92,7 +92,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">黑狐</h1>
+      <h1 class="site-title">洋葱</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -155,16 +155,84 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2022/04/01/linux%E7%9A%84%E7%9B%AE%E5%BD%95%E5%92%8C%E6%96%87%E4%BB%B6/">
+    <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2022/06/21/bash%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/21/bash%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">bash笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-06-21 18:10:41 / 修改时间：18:55:43" itemprop="dateCreated datePublished" datetime="2022-06-21T18:10:41+08:00">2022-06-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/bash/" itemprop="url" rel="index"><span itemprop="name">bash</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#声明数组</span></span><br><span class="line">array=(value1 value2 value3)</span><br><span class="line"></span><br><span class="line"><span class="comment">#声明键值对</span></span><br><span class="line"><span class="built_in">declare</span> -A dict</span><br><span class="line">dict=(</span><br><span class="line">    [key1]=value1       </span><br><span class="line">    [key2]=value2</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">#数组</span></span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> <span class="variable">$&#123;!array[@]&#125;</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">printf</span> <span class="string">&quot;index:%s\n value:%s\n&quot;</span> <span class="string">&quot;<span class="variable">$index</span>&quot;</span> <span class="string">&quot;<span class="variable">$&#123;array[$index]&#125;</span>&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> <span class="variable">$&#123;array[@]&#125;</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    .....</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span> “length:%s\n” <span class="string">&quot;<span class="variable">$&#123;#array[@]&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#其他</span></span><br><span class="line">bash不能直接进行浮点数运算。可以通过bc或awk间接运算</span><br><span class="line"></span><br><span class="line">修改的文件数据，不能再通过重定向写回文件。可通过sponge解决</span><br><span class="line">grep <span class="string">&#x27;...&#x27;</span> file &gt; file  <span class="comment">#error</span></span><br><span class="line">grep <span class="string">&#x27;...&#x27;</span> file | sponge file</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2022/04/01/linux%E7%9A%84%E7%9B%AE%E5%BD%95%E5%92%8C%E6%96%87%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="洋葱">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洋葱">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -178,10 +246,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-04-01 19:01:12 / 修改时间：21:31:18" itemprop="dateCreated datePublished" datetime="2022-04-01T19:01:12+08:00">2022-04-01</time>
+              <time title="创建时间：2022-04-01 19:01:12" itemprop="dateCreated datePublished" datetime="2022-04-01T19:01:12+08:00">2022-04-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-06-21 09:33:32" itemprop="dateModified" datetime="2022-06-21T09:33:32+08:00">2022-06-21</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -203,11 +277,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="profile"><a href="#profile" class="headerlink" title="~/.profile"></a>~/.profile</h4><p>/bin/sh 的登录配置文件。当一个可登录交互式shell成功登录后会调用该文件。<br>兼容sh的shell，如bash，也会调用该文件。</p>
-<h4 id="bashrc"><a href="#bashrc" class="headerlink" title="~/.bashrc"></a>~/.bashrc</h4><p>当启动一个可交互bash会调用该文件。</p>
-<h4 id="bash-profile"><a href="#bash-profile" class="headerlink" title="~/.bash_profile"></a>~/.bash_profile</h4><p>/bin/bash的登录配置文件。</p>
+          <h4 id="profile"><a href="#profile" class="headerlink" title="~/.profile"></a>~/.profile</h4><p>/usr/bin/sh的登录配置文件。任何兼容sh的shell，登录时也会调用</p>
+<h4 id="bash-profile"><a href="#bash-profile" class="headerlink" title="~/.bash_profile"></a>~/.bash_profile</h4><p>/usr/bin/bash的登录配置文件。<br>默认只有一句<code>[[ -f ~/.bashrc ]] &amp;&amp; . ~/.bashrc</code>，即调用.bashrc</p>
+<h4 id="bashrc"><a href="#bashrc" class="headerlink" title="~/.bashrc"></a>~/.bashrc</h4><p>启动一个可交互,非登录bash会调用</p>
 <h4 id="bash-logout"><a href="#bash-logout" class="headerlink" title="~/.bash_logout"></a>~/.bash_logout</h4><p>当用户登出后调用</p>
 <h4 id="bash-history"><a href="#bash-history" class="headerlink" title="~/.bash_history"></a>~/.bash_history</h4><p>记录输入的命令</p>
+<h4 id="var-log"><a href="#var-log" class="headerlink" title="/var/log/"></a>/var/log/</h4><p>大多数软件的日志目录</p>
 <h4 id="config"><a href="#config" class="headerlink" title="~/.config/"></a>~/.config/</h4><p>存放软件对于当前用户的配置</p>
 <h4 id="cache"><a href="#cache" class="headerlink" title="~/.cache/"></a>~/.cache/</h4><p>存放软件对于当前用户的缓存</p>
 <h4 id="local"><a href="#local" class="headerlink" title="~/.local/"></a>~/.local/</h4><p>存放当前用户的应用。</p>
@@ -236,12 +311,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -263,7 +338,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-01 21:57:08" itemprop="dateModified" datetime="2022-04-01T21:57:08+08:00">2022-04-01</time>
+                <time title="修改时间：2022-06-17 09:20:36" itemprop="dateModified" datetime="2022-06-17T09:20:36+08:00">2022-06-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -291,7 +366,9 @@
 <p>rime输入法切换中文时默认是繁体的，需要配置一下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#新建</span></span><br><span class="line"><span class="comment">#rime引擎自带多种输入方案，我用luna_pinyin</span></span><br><span class="line"><span class="comment">#其他输入方案，name.custom.yaml</span></span><br><span class="line">&gt; ~/.<span class="built_in">local</span>/share/fcitx5/rime/luna_pinyin.custom.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment">#写入以下内容</span></span><br><span class="line"><span class="comment"># encoding: utf-8</span></span><br><span class="line">patch:</span><br><span class="line">  switches:</span><br><span class="line">    - name: ascii_mode</span><br><span class="line">      reset: 0</span><br><span class="line">      states: [<span class="string">&quot;中文&quot;</span>, <span class="string">&quot;西文&quot;</span>]</span><br><span class="line">    - name: full_shape</span><br><span class="line">      states: [<span class="string">&quot;半角&quot;</span>, <span class="string">&quot;全角&quot;</span>]</span><br><span class="line">    - name: simplification</span><br><span class="line">      reset: 1                     <span class="comment">#切换默认简体</span></span><br><span class="line">      states: [<span class="string">&quot;漢字&quot;</span>, <span class="string">&quot;汉字&quot;</span>]</span><br><span class="line">    - name: ascii_punct</span><br><span class="line">      states: [<span class="string">&quot;。，&quot;</span>, <span class="string">&quot;．，&quot;</span>]</span><br></pre></td></tr></table></figure>
 
-<h4 id="wps"><a href="#wps" class="headerlink" title="wps"></a>wps</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yay -S wps-office-cn  <span class="comment">#wps CN version</span></span><br><span class="line">yay -S ttf-wps-fonts  <span class="comment">#特殊符号支持</span></span><br><span class="line">yay -S wps-office-mui-zh-cn <span class="comment">#完整中文支持</span></span><br></pre></td></tr></table></figure>
+<h4 id="mozc"><a href="#mozc" class="headerlink" title="mozc"></a>mozc</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pacman -S fcitx5-mozc </span><br></pre></td></tr></table></figure>
+
+<h4 id="wps"><a href="#wps" class="headerlink" title="wps"></a>wps</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">yay -S wps-office-cn  <span class="comment">#wps CN version</span></span><br><span class="line">yay -S ttf-wps-fonts  <span class="comment">#特殊符号支持</span></span><br><span class="line">yay -S wps-office-mui-zh-cn <span class="comment">#完整中文支持</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -315,12 +392,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -450,12 +527,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -525,12 +602,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -601,12 +678,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -712,12 +789,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -805,12 +882,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -908,12 +985,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
+      <meta itemprop="name" content="洋葱">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -986,103 +1063,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2021/07/08/manjaro%E5%8C%85%E9%AA%8C%E8%AF%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黑狐">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑狐">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/08/manjaro%E5%8C%85%E9%AA%8C%E8%AF%81/" class="post-title-link" itemprop="url">manjaro包验证</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-08 23:44:33" itemprop="dateCreated datePublished" datetime="2021-07-08T23:44:33+08:00">2021-07-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-16 22:38:38" itemprop="dateModified" datetime="2022-02-16T22:38:38+08:00">2022-02-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/manjaro/" itemprop="url" rel="index"><span itemprop="name">manjaro</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="pacman-key"><a href="#pacman-key" class="headerlink" title="pacman-key"></a>pacman-key</h2><p>pacman-key是pacman用来管理受信任证书(公钥)的工具。</p>
-<p><code>pacman-key --init</code></p>
-<p>在/etc/pacman.d/gnupg建立新密钥并生成系统主密钥。</p>
-<p><code>pacman-key --populate keyring</code></p>
-<p>加载keyring里的公钥</p>
-<p><code>pacman-key --refresh-keys</code></p>
-<p>通过远程服务器，更新本地的keyring</p>
-<h2 id="包更新"><a href="#包更新" class="headerlink" title="包更新"></a>包更新</h2><p>一般我们用以下命令进行安装或升级。</p>
-<p><code>pacman -S &lt;package_name&gt;</code></p>
-<p>manjaro的软件包是基于PGP进行验证的，所于有时会出现：</p>
-<p><code>Import PGP key public_key_id, “author_name author_mail”? [Y/n]</code></p>
-<p>这说明本地，没有下载包的公钥，无法验证这个包的合法性</p>
-<p>按Y之后，会从远端服务器下载这个公钥，但前提是要在/etc/pacman.d/gnupg/gpg.conf配置公钥证书服务器的地址</p>
-<p>manjaro默认是没有配置这个地址的，所以：</p>
-<p><code>error: key “public_key” could not be looked up remotely</code></p>
-<p>但一般只要更新keyring，就能获取最新的公钥</p>
-<p><code>pacman -Sy archlinuxcn-keyring manjaro-keyring</code></p>
-<p>pacman的密钥信息存储在/etc/pacman.d/gnupg 默认是只导入了manjaro的keyring。所以为了用arch的包，我也导入了archlinuxcn-keyring</p>
-<h2 id="包降级"><a href="#包降级" class="headerlink" title="包降级"></a>包降级</h2><h3 id="downgrade"><a href="#downgrade" class="headerlink" title="downgrade"></a>downgrade</h3><p><code>downgrade &lt;package_name&gt;</code> 就会列出可以降级的版本，根据命令提示从中选择就行</p>
-<p>需要注意的是，它会从本地缓存提取以前的安装版本和远端可回退的版本。但是，如果软件是包属于stable分支,那只会提供本地的版本。</p>
-<h3 id="本地安装覆盖"><a href="#本地安装覆盖" class="headerlink" title="本地安装覆盖"></a>本地安装覆盖</h3><p>1.下载以前版本的安装包</p>
-<p>2.<code>pacman -U /root/Download/packagename.tar.gz</code></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1139,7 +1124,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">黑狐</p>
+  <p class="site-author-name" itemprop="name">洋葱</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -1147,20 +1132,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1199,7 +1184,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">黑狐</span>
+  <span class="author" itemprop="copyrightHolder">洋葱</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
