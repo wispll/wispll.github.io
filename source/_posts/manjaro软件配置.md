@@ -46,9 +46,17 @@ patch:
       states: ["。，", "．，"]
 ```
 
+#### mozc
+
+```bash
+
+pacman -S fcitx5-mozc 
+```
+
 #### wps
 
 ```bash
+
 yay -S wps-office-cn  #wps CN version
 yay -S ttf-wps-fonts  #特殊符号支持
 yay -S wps-office-mui-zh-cn #完整中文支持

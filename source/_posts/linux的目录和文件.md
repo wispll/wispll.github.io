@@ -7,16 +7,16 @@ categories: linux
 
 #### ~/.profile
 
-/bin/sh 的登录配置文件。当一个可登录交互式shell成功登录后会调用该文件。
-兼容sh的shell，如bash，也会调用该文件。
-
-#### ~/.bashrc
-
-当启动一个可交互bash会调用该文件。
+/usr/bin/sh的登录配置文件。任何兼容sh的shell，登录时也会调用
 
 #### ~/.bash_profile
 
-/bin/bash的登录配置文件。
+/usr/bin/bash的登录配置文件。
+默认只有一句`[[ -f ~/.bashrc ]] && . ~/.bashrc`，即调用.bashrc
+
+#### ~/.bashrc
+
+启动一个可交互,非登录bash会调用
 
 #### ~/.bash_logout
 
@@ -25,6 +25,10 @@ categories: linux
 #### ~/.bash_history
 
 记录输入的命令
+
+#### /var/log/
+
+大多数软件的日志目录
 
 #### ~/.config/
 
