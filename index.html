@@ -155,6 +155,78 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2022/06/22/linux%E6%97%B6%E9%97%B4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="洋葱">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洋葱">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/22/linux%E6%97%B6%E9%97%B4/" class="post-title-link" itemprop="url">linux时间</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-06-22 09:19:48 / 修改时间：09:29:42" itemprop="dateCreated datePublished" datetime="2022-06-22T09:19:48+08:00">2022-06-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>linux时间，分为系统时间和bios时间。每次开机，系统时间由bios时间决定。</p>
+<h3 id="修改系统时间"><a href="#修改系统时间" class="headerlink" title="修改系统时间"></a>修改系统时间</h3><h4 id="date命令"><a href="#date命令" class="headerlink" title="date命令"></a>date命令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">date -s &quot;2006-11-23&quot;</span><br><span class="line">date -s &quot;22:07:21&quot; </span><br><span class="line">date -s &quot;2005-6-4 17:26&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="通过ntp服务器同步时间"><a href="#通过ntp服务器同步时间" class="headerlink" title="通过ntp服务器同步时间"></a>通过ntp服务器同步时间</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ntpdate -u ntp5.aliyun.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改bios时间"><a href="#修改bios时间" class="headerlink" title="修改bios时间"></a>修改bios时间</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hwclock --show 显示bios时间</span><br><span class="line">hwclock --systohc 将系统时间写入bios</span><br><span class="line">hwclock --hctosys 将bios时间写入系统</span><br><span class="line">hwclock --help 显示帮助</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2022/06/21/bash%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -977,92 +1049,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2021/07/25/vim%E5%86%99Qt/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="洋葱">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洋葱">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/25/vim%E5%86%99Qt/" class="post-title-link" itemprop="url">vim写Qt</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-25 13:03:17" itemprop="dateCreated datePublished" datetime="2021-07-25T13:03:17+08:00">2021-07-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-16 22:38:38" itemprop="dateModified" datetime="2022-02-16T22:38:38+08:00">2022-02-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vim/" itemprop="url" rel="index"><span itemprop="name">vim</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Qt项目结构"><a href="#Qt项目结构" class="headerlink" title="Qt项目结构"></a>Qt项目结构</h2><p>Qt的项目结构写在.pro文件中。下面是一个最基本的.pro文件。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">QMAKE_CC = clang </span><br><span class="line">QMAKE_CXX = clang++</span><br><span class="line"></span><br><span class="line">#qt module</span><br><span class="line">QT += core gui</span><br><span class="line">QT += widgets</span><br><span class="line"></span><br><span class="line">#output file name</span><br><span class="line">TARGET    = output</span><br><span class="line"></span><br><span class="line">#build an application</span><br><span class="line">TEMPLATE  = app</span><br><span class="line"></span><br><span class="line">#resource file</span><br><span class="line">RESOURCES = res/res.qrc</span><br><span class="line"></span><br><span class="line">#output directory</span><br><span class="line">DESTDIR = $$PWD/builds</span><br><span class="line"></span><br><span class="line">#build directory</span><br><span class="line">OBJECTS_DIR = $$&#123;DESTDIR&#125;/.objects</span><br><span class="line">MOC_DIR = $$&#123;DESTDIR&#125;/.moc</span><br><span class="line">RCC_DIR = $$&#123;DESTDIR&#125;/.rcc</span><br><span class="line">UI_DIR = $$&#123;DESTDIR&#125;/.ui</span><br><span class="line"></span><br><span class="line">#cpp file</span><br><span class="line">SOURCES  += src/*.cpp</span><br><span class="line"></span><br><span class="line">#header file</span><br><span class="line">HEADERS  += include/*.h</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>有了.pro文件，通过qmake命令就可以生成Makefile文件。</p>
-<h2 id="代码补全"><a href="#代码补全" class="headerlink" title="代码补全"></a>代码补全</h2><p>补全我是用YCM插件，YCM有两种方法可以提供补全。</p>
-<ul>
-<li><p>编译器是clang，可以使用编译数据库文件compile_commands.json</p>
-</li>
-<li><p>其他编译器，需要将编译标志写在.ycm_extra_conf.py文件中</p>
-</li>
-</ul>
-<h3 id="compile-commands-json"><a href="#compile-commands-json" class="headerlink" title="compile_commands.json"></a>compile_commands.json</h3><p>首先安装bear这个软件，项目地址<a target="_blank" rel="noopener" href="https://github.com/rizsotto/Bear">https://github.com/rizsotto/Bear</a>。<br>bear可以通过Makefile文件生成compile_commands.json文件。<br>执行命令<code>bear -- make</code>，就可以将Makefile中的编译标志告诉bear生成compile_commands.json。</p>
-<h3 id="ycm-extra-conf-py"><a href="#ycm-extra-conf-py" class="headerlink" title=".ycm_extra_conf.py"></a>.ycm_extra_conf.py</h3><p>对于.ycm_extra_conf.py, 可以通过YCM-Generator这个vim插件来生成。<br>注意，这个插件生成的编译标志只适用于Qt。<br>vim执行<code>:CCGenerateConfig</code>, 然后就会在当前目录生成.ycm_extra_conf.py文件，注意当前目录，必须存在Makefile文件。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1132,7 +1118,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1145,7 +1131,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
