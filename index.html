@@ -155,6 +155,83 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2022/08/09/%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E5%90%8Evirtualbox%E6%89%93%E4%B8%8D%E5%BC%80%E9%95%9C%E5%83%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="洋葱">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洋葱">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/09/%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E5%90%8Evirtualbox%E6%89%93%E4%B8%8D%E5%BC%80%E9%95%9C%E5%83%8F/" class="post-title-link" itemprop="url">系统更新后virtualbox打不开镜像</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-08-09 10:08:56 / 修改时间：11:08:48" itemprop="dateCreated datePublished" datetime="2022-08-09T10:08:56+08:00">2022-08-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/virtualbox/" itemprop="url" rel="index"><span itemprop="name">virtualbox</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>不久前，更新系统后，virtualbox的win10镜像打不开。</p>
+<p>因为不怎么用，所以一直没有怎么管它。</p>
+<p>最近想用一用，决定修一修。</p>
+<p>各种排查后发现是插件<code>virtualbox-ext-oracle</code>版本不对</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">pacman -Qs virtualbox</span><br><span class="line"></span><br><span class="line"><span class="built_in">local</span>/linux515 5.15.57-2</span><br><span class="line">    The Linux515 kernel and modules</span><br><span class="line"><span class="built_in">local</span>/linux515-virtualbox-host-modules 6.1.36-4 (linux515-extramodules)</span><br><span class="line">    Virtualbox host kernel modules <span class="keyword">for</span> Manjaro Kernel</span><br><span class="line"><span class="built_in">local</span>/virtualbox 6.1.36-1</span><br><span class="line">    Powerful x86 virtualization <span class="keyword">for</span> enterprise as well as home use</span><br><span class="line"><span class="built_in">local</span>/virtualbox-ext-oracle 6.1.34-1</span><br><span class="line">    Oracle VM VirtualBox Extension Pack</span><br><span class="line"><span class="built_in">local</span>/virtualbox-guest-iso 6.1.36-1</span><br><span class="line">    The official VirtualBox Guest Additions ISO image</span><br></pre></td></tr></table></figure>
+
+<p>可以看到里面有一个<code>6.1.34-1</code>的版本</p>
+<p>通过<code>pacman -Qi</code>对比查看，可以发现上一次滚动更新这小子没有更新。</p>
+<p>通过<code>pacman -Ss</code>发现除了<code>virtualbox-ext-oracle</code>是aur仓库，其他全是comunity仓库的。</p>
+<p>原因猜测大概是更新的时候，aur的源相对community的源滞后了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2022/07/14/vimdiff/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -935,99 +1012,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wispll.github.io/2021/09/01/go%E7%9A%84http%E6%9C%8D%E5%8A%A1%E5%9B%9E%E8%B0%83%E4%BC%9A%E6%89%A7%E8%A1%8C%E4%B8%A4%E6%AC%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="洋葱">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洋葱">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/01/go%E7%9A%84http%E6%9C%8D%E5%8A%A1%E5%9B%9E%E8%B0%83%E4%BC%9A%E6%89%A7%E8%A1%8C%E4%B8%A4%E6%AC%A1/" class="post-title-link" itemprop="url">go的http服务回调会执行两次</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-01 11:42:17" itemprop="dateCreated datePublished" datetime="2021-09-01T11:42:17+08:00">2021-09-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-16 22:38:38" itemprop="dateModified" datetime="2022-02-16T22:38:38+08:00">2022-02-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>先来看下面的一段代码：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;net/http&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	http.HandleFunc(<span class="string">&quot;/&quot;</span>, indexHandler)</span><br><span class="line">	http.ListenAndServe(<span class="string">&quot;:8811&quot;</span>, <span class="literal">nil</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">indexHandler</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;index page&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>当在浏览器输入localhost:8811的时候，命令行会输出</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index page</span><br><span class="line">index page </span><br></pre></td></tr></table></figure>
-
-<p>会产生两次输出。</p>
-<p>这是因为浏览器在访问一个地址的时候，会默认访问host/favicon.ico作为网站图标。<br>所以这其实是两个请求</p>
-<ul>
-<li><p>localhost:8811</p>
-</li>
-<li><p>localhost:8811/favicon.ico</p>
-</li>
-</ul>
-<p>但/favicon.ico，我们是没有进行处理的。这就要看http模块内部的处理方式了。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//启动了一个http服务</span></span><br><span class="line">http.ListenAndServe(<span class="string">&quot;:8811&quot;</span>, <span class="literal">nil</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//这是函数的签名</span></span><br><span class="line"><span class="comment">// ListenAndServe listens on the TCP network address addr and then calls</span></span><br><span class="line"><span class="comment">// Serve with handler to handle requests on incoming connections.</span></span><br><span class="line"><span class="comment">// Accepted connections are configured to enable TCP keep-alives.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// The handler is typically nil, in which case the DefaultServeMux is used.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// ListenAndServe always returns a non-nil error.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ListenAndServe</span><span class="params">(addr <span class="keyword">string</span>, handler Handler)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	server := &amp;Server&#123;Addr: addr, Handler: handler&#125;</span><br><span class="line">	<span class="keyword">return</span> server.ListenAndServe()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>handler这个参数传入了nil，根据注释它会默认使用DefaultServeMux</p>
-<p>DefaultServeMux对于不在的路径，会转交给”/“路径的handler处理。更详细的可以看看DefaultServeMux的定义和注释。</p>
-<p>所以回调才会被执行了两次，当用<code>curl localhost:8811</code>访问时，回调就会正常的执行一次。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1097,14 +1081,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
